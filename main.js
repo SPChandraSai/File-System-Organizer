@@ -9,8 +9,8 @@ let command = inputArr[0];
 let types = {
     media: ["mp4", "mkv"],
     archives: ['zip', '7z', 'rar', 'tar', 'gz', 'ar', 'iso', 'xz'],
-    documents: ['docs', 'doc', 'pdf', 'xlsx', 'xls', 'odt', 'ods', 'odp', 'odg', 'odf', 'txt', 'ps', 'tex'],
-    app: ['exe', 'dmg', 'pkg', 'deb']
+    documents: ['docx', 'doc', 'pdf', 'xlsx', 'xls', 'pptx', 'odt', 'ods', 'odp', 'odg', 'odf', 'txt', 'ps', 'tex'],
+    app: ['exe', 'dmg', 'pkg', 'deb', 'msi']
 }
 switch (command) {
     case "tree":
@@ -28,7 +28,21 @@ switch (command) {
 }
 
 function treeFn(dirPath) {
-    console.log("Tree command implemented for ", dirPath);
+    // let destPath;
+    if (dirPath == undefined) {
+        console.log("Kindly enter the path");
+        return;
+    }
+    else {
+        let doesExist = fs.existsSync(dirPath);
+        if (doesExist) {
+           treeHelper(dirPath);
+        }
+        else {
+            console.log("Kindly enter the correct path");
+            return;
+        }
+    }
 }
 
 function organizeFn(dirPath) {
