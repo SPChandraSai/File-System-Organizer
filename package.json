@@ -1,0 +1,15 @@
+{
+  "name": "file-system-organizer-(nodejs-project)",
+  "version": "1.0.0",
+  "description": "I have built a global command line application using Node.js. \r It organizes all your files from a folder into different sections so that you need not to do it manually.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin" : {
+    "peppy":"main.js"
+  }
+}
