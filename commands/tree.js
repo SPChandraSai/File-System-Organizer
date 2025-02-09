@@ -1,3 +1,5 @@
+let fs = require("fs");
+let path = require("path");
 function treeFn(dirPath) {
     // let destPath;
     if (dirPath == undefined) {
@@ -33,6 +35,6 @@ function treeHelper(dirPath, indent) {
         }
     }
 }
-module.exports={
-    treeKey:treeFn
+module.exports = {
+    treeKey: treeFn
 }

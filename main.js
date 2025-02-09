@@ -2,9 +2,9 @@
 let inputArr = process.argv.slice(2);
 let fs = require("fs");
 let path = require("path");
-let helpObj=require("./commands/help");
-let treeObj=require("./commands/tree");
-let organizeObj=require("./commands/organize");
+let helpObj = require("./commands/help");
+let treeObj = require("./commands/tree");
+let organizeObj = require("./commands/organize");
 // console.log(inputArr);
 // node main.js tree "directoryPath"
 // node main.js organize "directoryPath"
@@ -24,7 +24,7 @@ switch (command) {
         organizeObj.organizeKey(inputArr[1]);
         break;
     case "help":
-        helpObj.helpKey(inputArr[1]);
+        helpObj.helpKey();
         break;
     default:
         console.log("Please 🙏 Input Right command");

@@ -1,5 +1,7 @@
+const types=require("../utility").types
+let fs = require("fs");
+let path = require("path");
 function organizeFn(dirPath) {
-    // console.log("Organize command implemented for ", dirPath);
     // 1. input -> directory path given
     let destPath;
     if (dirPath == undefined) {
@@ -21,7 +23,6 @@ function organizeFn(dirPath) {
         }
     }
     organizeHelper(dirPath, destPath);
-    // 3. identify categories of all the files present in that input directory ->
 }
 function organizeHelper(src, dest) {
     // 3. identify categories of all the files present in that input directory ->
@@ -63,6 +64,6 @@ function getCategory(name) {
     }
     return "others";
 }
-module.exports={
-    organizeKey:organizeFn
+module.exports = {
+    organizeKey: organizeFn
 }
