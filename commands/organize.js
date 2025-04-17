@@ -62,7 +62,7 @@ function getCategory(name) {
             }
         }
     }
-    return "others";
+    return ext || "others";
 }
 module.exports = {
     organizeKey: organizeFn
